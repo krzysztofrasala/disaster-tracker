@@ -1,51 +1,51 @@
-# NASA EONET Disaster Tracker 🌍🔥
+# NASA Global Disaster Dashboard 🌍🔥
 
-A specialized Python tool designed to monitor and analyze real-time natural events such as wildfires, volcanic eruptions, and icebergs using NASA's **Earth Observatory Natural Event Tracker (EONET)** API.
+An interactive web application built with **Streamlit** to monitor and analyze global natural disasters using **NASA's EONET (Earth Observatory Natural Event Tracker) API**.
 
-## 📌 Project Overview
-This project serves as a practical application for data acquisition and environmental monitoring. It fetches active event data from NASA, processes geographic coordinates, and generates structured analytical reports. It's built with a focus on clean code, modularity, and professional data handling.
+## 🚀 Key Features
+- **Global Monitoring:** Access real-time and historical data for wildfires, volcanoes, and more.
+- **Interactive Maps:** Built with **Folium**, featuring event popups and multiple map styles (Dark, Satellite, Standard).
+- **Advanced Analytics:** Dynamic charts using **Plotly** to track event distribution and daily activity.
+- **Flexible Filters:** Toggle between "Only Active" and "All Events" to get a truly global perspective.
+- **Secure Integration:** Uses `.env` for safe API key management.
 
-## 🚀 Features
-- **Real-time Monitoring:** Accesses NASA's live database of global natural disasters.
-- **Data Processing:** Uses Pandas to clean and structure complex JSON responses into readable DataFrames.
-- **Automated Reporting:** Generates timestamped CSV reports for further analysis in tools like Excel or Tableau.
-- **Global Statistics:** Provides a summary of event categories (e.g., how many wildfires are active vs. volcanoes).
-- **Secure Integration:** Fully compatible with .env files to protect sensitive API credentials.
-
-## 🛠️ Technologies
+## 🛠️ Tech Stack
 - **Python 3.12+**
-- **Requests:** For API communication.
-- **Pandas:** For high-level data manipulation and CSV generation.
-- **Python-dotenv:** For secure environment variable management.
+- **Streamlit:** Web dashboard framework.
+- **Folium:** Interactive map rendering.
+- **Plotly:** Data visualization (Bar & Pie charts).
+- **Pandas:** Data manipulation and analysis.
 
-## ⚙️ Setup & Installation
+## ⚙️ Installation & Setup
 
 1. **Clone the repository:**
+   \`\`\`bash
    git clone https://github.com/krzysztofrasala/disaster-tracker.git
    cd disaster-tracker
+   \`\`\`
 
-2. **Create and activate a virtual environment:**
+2. **Set up virtual environment:**
+   \`\`\`bash
    python3 -m venv .venv
    source .venv/bin/activate
+   \`\`\`
 
 3. **Install dependencies:**
+   \`\`\`bash
    pip install -r requirements.txt
+   \`\`\`
 
-4. **Set up your API Key:**
-   - Create a .env file in the root directory.
-   - Add your NASA API Key (get it from api.nasa.gov):
-     NASA_API_KEY=your_actual_api_key_here
+4. **API Configuration:**
+   Create a \`.env\` file and add your NASA API key:
+   \`\`\`text
+   NASA_API_KEY=your_key_here
+   \`\`\`
 
-## 📈 Usage
-Run the main script to fetch the latest 30 days of global events and generate a report:
-python main.py
+## 📈 Running the App
+Start the dashboard locally:
+\`\`\`bash
+streamlit run app.py
+\`\`\`
 
-The script will output a summary to the console and save a detailed CSV file in the data/ directory.
-
-## 🔒 Security Note
-This project is configured with a .gitignore file to ensure that:
-- Your .env file (API Keys) is **never** uploaded to GitHub.
-- Local data reports and virtual environments are kept out of the repository.
-
-## 📄 License
-This project is open-source and available for educational purposes.
+## 🔒 Security
+The project is configured with a \`.gitignore\` file to ensure that sensitive files like \`.env\` and local caches are never uploaded to the public repository.
